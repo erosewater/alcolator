@@ -14,6 +14,14 @@
 
 @implementation WhiskeyViewController
 
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    self.title = NSLocalizedString(@"Whiskey", @"whiskey");
+}
+
+
+
+
 -(void)buttonPressed:(UIButton *)sender;
 
 {
@@ -34,7 +42,7 @@
     
     NSString *beerText;
     
-    if (numberOfBeers == 1) {
+    if (numberOfBeers <= 1) {
         beerText = NSLocalizedString(@"beer", @"singular beer");
         
     } else {
@@ -44,7 +52,7 @@
     
     NSString *whiskeyText;
     
-    if (numberOfWhiskeyGlassesForEquivolentAlcoholAmount == 1) {
+    if (numberOfWhiskeyGlassesForEquivolentAlcoholAmount <= 1) {
         whiskeyText = NSLocalizedString(@"shot", @"singular shot");
         
     } else {
@@ -52,8 +60,13 @@
     }
 
 
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.lf %@ of whiskey.", nil),numberOfBeers, beerText, numberOfWhiskeyGlassesForEquivolentAlcoholAmount, whiskeyText];
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ of whiskey.", nil),numberOfBeers, beerText, numberOfWhiskeyGlassesForEquivolentAlcoholAmount, whiskeyText];
     self.resultLabel.text = resultText;
+    
+    
+    NSString *finalResult = [NSString stringWithFormat:NSLocalizedString(@"%.1f %@ of whiskey",nil), numberOfWhiskeyGlassesForEquivolentAlcoholAmount, whiskeyText];
+    
+    self.title = finalResult;
     
     
     

@@ -57,6 +57,9 @@
     
     [super viewDidLoad];
 
+    // Add the title
+    self.title = NSLocalizedString(@"Wine", @"wine");
+    
     //set our primary view's babkgound color to lightGrayColor
     self.view.backgroundColor = [UIColor lightGrayColor];
     
@@ -129,18 +132,18 @@
     CGFloat itemWidth = viewWidth - padding - padding;
     CGFloat itemHeight = 44;
     
-    self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
+    self.beerPercentTextField.frame = CGRectMake(padding + 10, padding + 50, itemWidth, itemHeight);
     
     CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
-    self.beerCountSlider.frame = CGRectMake(padding, bottomOfTextField + padding, itemWidth, itemHeight);
+    self.beerCountSlider.frame = CGRectMake(padding + 10, bottomOfTextField + padding, itemWidth, itemHeight);
     
     CGFloat bottomOfSlider = CGRectGetMaxY(self.beerCountSlider.frame);
-    self.resultLabel.frame = CGRectMake(padding, bottomOfSlider + padding, itemWidth, itemHeight * 4);
-    self.drinkCountLabel.frame = CGRectMake(padding, bottomOfSlider + padding, itemWidth, itemHeight * 2);
+    self.resultLabel.frame = CGRectMake(padding + 10, bottomOfSlider + padding, itemWidth, itemHeight * 4);
+    self.drinkCountLabel.frame = CGRectMake(padding + 10, bottomOfSlider + padding, itemWidth, itemHeight * 2);
    
     
     CGFloat bottomOfLabel = CGRectGetMaxY(self.resultLabel.frame);
-    self.calculateButton.frame = CGRectMake(padding, bottomOfLabel + padding, itemWidth, itemHeight);
+    self.calculateButton.frame = CGRectMake(padding + 10, bottomOfLabel + padding, itemWidth, itemHeight);
     
     
 }
@@ -164,9 +167,19 @@
 
 - (void)sliderValueDidChange:(UISlider *)sender {
     // Adding count of drinks to label
-    NSString *drinkCount = [NSString stringWithFormat:NSLocalizedString(@"%f alcohlic drinks consumed",nil), sender.value];
-    //NSLog(@" %@", drinkCount);
+    
+    NSString *beerCountText;
+    
+    if (sender.value == 1) {
+        beerCountText = NSLocalizedString(@"beer", @"singular beer");
+    } else {
+        beerCountText = NSLocalizedString(@"beers", @"plural of beer");
+    }
+    
+    NSString *drinkCount = [NSString stringWithFormat:NSLocalizedString(@"%.1f  %@ consumed",nil), sender.value, beerCountText];
+    
     self.drinkCountLabel.text = drinkCount;
+    self.title = drinkCount;
     [self.beerPercentTextField resignFirstResponder];
     
   }
@@ -214,6 +227,11 @@
     
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText, numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
     self.resultLabel.text = resultText;
+    
+    NSString *finalResult = [NSString stringWithFormat:NSLocalizedString(@"%.1f %@ of wine",nil), numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
+    
+    self.title = finalResult;
+    
 }
 
 - (void)tapGestureDidFire:(UITapGestureRecognizer *)sender {

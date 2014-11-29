@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91DE7C91A2932ED0022AFF2 /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91DE7C81A2932ED0022AFF2 /* WhiskeyViewController.m */; };
+		F91DE7CC1A2933490022AFF2 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91DE7CB1A2933490022AFF2 /* MainMenuViewController.m */; };
 		F9FEB5061A1D0CC400214401 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FEB5051A1D0CC400214401 /* main.m */; };
 		F9FEB5091A1D0CC400214401 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FEB5081A1D0CC400214401 /* AppDelegate.m */; };
 		F9FEB50C1A1D0CC400214401 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FEB50B1A1D0CC400214401 /* ViewController.m */; };
-		F9FEB50F1A1D0CC400214401 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FEB50D1A1D0CC400214401 /* Main.storyboard */; };
 		F9FEB5111A1D0CC400214401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FEB5101A1D0CC400214401 /* Images.xcassets */; };
 		F9FEB5141A1D0CC400214401 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9FEB5121A1D0CC400214401 /* LaunchScreen.xib */; };
 		F9FEB5201A1D0CC400214401 /* CalcoholTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FEB51F1A1D0CC400214401 /* CalcoholTests.m */; };
@@ -27,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F91DE7C71A2932ED0022AFF2 /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
+		F91DE7C81A2932ED0022AFF2 /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
+		F91DE7CA1A2933490022AFF2 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuViewController.h; path = ../MainMenuViewController.h; sourceTree = "<group>"; };
+		F91DE7CB1A2933490022AFF2 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = ../MainMenuViewController.m; sourceTree = "<group>"; };
 		F9FEB5001A1D0CC400214401 /* Calcohol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calcohol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FEB5041A1D0CC400214401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9FEB5051A1D0CC400214401 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,7 +39,6 @@
 		F9FEB5081A1D0CC400214401 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F9FEB50A1A1D0CC400214401 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F9FEB50B1A1D0CC400214401 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F9FEB50E1A1D0CC400214401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9FEB5101A1D0CC400214401 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F9FEB5131A1D0CC400214401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F9FEB5191A1D0CC400214401 /* CalcoholTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcoholTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,9 +87,12 @@
 			children = (
 				F9FEB5071A1D0CC400214401 /* AppDelegate.h */,
 				F9FEB5081A1D0CC400214401 /* AppDelegate.m */,
+				F91DE7CA1A2933490022AFF2 /* MainMenuViewController.h */,
+				F91DE7CB1A2933490022AFF2 /* MainMenuViewController.m */,
 				F9FEB50A1A1D0CC400214401 /* ViewController.h */,
 				F9FEB50B1A1D0CC400214401 /* ViewController.m */,
-				F9FEB50D1A1D0CC400214401 /* Main.storyboard */,
+				F91DE7C71A2932ED0022AFF2 /* WhiskeyViewController.h */,
+				F91DE7C81A2932ED0022AFF2 /* WhiskeyViewController.m */,
 				F9FEB5101A1D0CC400214401 /* Images.xcassets */,
 				F9FEB5121A1D0CC400214401 /* LaunchScreen.xib */,
 				F9FEB5031A1D0CC400214401 /* Supporting Files */,
@@ -199,7 +206,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9FEB50F1A1D0CC400214401 /* Main.storyboard in Resources */,
 				F9FEB5141A1D0CC400214401 /* LaunchScreen.xib in Resources */,
 				F9FEB5111A1D0CC400214401 /* Images.xcassets in Resources */,
 			);
@@ -220,8 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9FEB50C1A1D0CC400214401 /* ViewController.m in Sources */,
+				F91DE7C91A2932ED0022AFF2 /* WhiskeyViewController.m in Sources */,
 				F9FEB5091A1D0CC400214401 /* AppDelegate.m in Sources */,
 				F9FEB5061A1D0CC400214401 /* main.m in Sources */,
+				F91DE7CC1A2933490022AFF2 /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +252,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F9FEB50D1A1D0CC400214401 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9FEB50E1A1D0CC400214401 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F9FEB5121A1D0CC400214401 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,6 +412,7 @@
 				F9FEB5251A1D0CC400214401 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9FEB5261A1D0CC400214401 /* Build configuration list for PBXNativeTarget "CalcoholTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				F9FEB5281A1D0CC400214401 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
