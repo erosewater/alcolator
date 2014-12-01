@@ -50,9 +50,9 @@
     NSString *selectedWhiskey = @"Whiskey Tab Selected";
     
     if ((unsigned long)tabBarController.selectedIndex == 0) {
-        NSLog(@"%@", selectedWine);
+        NSLog(@"New View Controller Selected: %@", selectedWine);
     } else {
-        NSLog(@"%@", selectedWhiskey);
+        NSLog(@"New View Controller Selected: %@", selectedWhiskey);
     }
         
     
