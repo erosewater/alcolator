@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "MainMenuViewController.h"
+#import "WhiskeyViewController.h"
+// #import "MainMenuViewController.h"
 
 
 
@@ -25,14 +26,40 @@
     // Override point for customization after application launch.
     //ViewController *viewController = [[ViewController alloc] init];
     //self.window.rootViewController = viewController;
-    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
-    self.window.rootViewController = navigationController;
+    //MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
+    //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
+    //self.window.rootViewController = navigationController;
+    ViewController *wineVC = [[ViewController alloc]init];
+    WhiskeyViewController *whiskeyVC = [[WhiskeyViewController alloc] init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = @[wineVC, whiskeyVC];
+    
+    self.window.rootViewController = tabBarVC;
+    tabBarVC.delegate = self;
+    
+    
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-
+- (void)tabBarController:(UITabBarController *)tabBarController
+ didSelectViewController:(UIViewController *)viewController {
+    NSString *selectedWine = @"Wine Tab Selected";
+    NSString *selectedWhiskey = @"Whiskey Tab Selected";
+    
+    if ((unsigned long)tabBarController.selectedIndex == 0) {
+        NSLog(@"%@", selectedWine);
+    } else {
+        NSLog(@"%@", selectedWhiskey);
+    }
+        
+    
+    
+   // NSLog(@"selected %lu",(unsigned long)tabBarController.selectedIndex);
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

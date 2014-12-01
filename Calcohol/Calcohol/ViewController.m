@@ -18,6 +18,22 @@
 @end
 
 @implementation ViewController
+
+
+- (instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Wine", @"wine");
+        
+        // Since we don't have icons, let's move the title to the middle of the tab bar
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+    }
+    
+    return self;
+}
+
+
 -(void)loadView {
     //Allocate and initialize the all encompassing view
     self.view = [[UIView alloc]init];
@@ -58,10 +74,13 @@
     [super viewDidLoad];
 
     // Add the title
-    self.title = NSLocalizedString(@"Wine", @"wine");
+  //  self.title = NSLocalizedString(@"Wine", @"wine");
+    
+    self.view.backgroundColor = [UIColor colorWithRed:0.741 green:0.925 blue:0.714 alpha:1]; /*#bdecb6*/
+    
     
     //set our primary view's babkgound color to lightGrayColor
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    //self.view.backgroundColor = [UIColor lightGrayColor];
     
     // Tells the text field that 'self', this instance of 'ViewController' should be treated as the text field's delgate - Need some help with this - talk to Steve
     self.beerPercentTextField.delegate = self;
@@ -179,8 +198,9 @@
     NSString *drinkCount = [NSString stringWithFormat:NSLocalizedString(@"%.1f  %@ consumed",nil), sender.value, beerCountText];
     
     self.drinkCountLabel.text = drinkCount;
-    self.title = drinkCount;
+    //self.title = drinkCount;
     [self.beerPercentTextField resignFirstResponder];
+     [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
     
   }
 
